@@ -93,6 +93,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     
     function checkWeightAndHappinessBeforeUpdating() {
       // Add conditional so if weight is lower than zero.
+      //Okay this is a super messy conditional that could be solved with some if else but im scrambling
+      //Essentially if Weight or Happiness or Energy get too low than it prevents and disables the buttons for the user
       if (pet_info.weight > 1) {
           pet_info.weight = pet_info.weight;
       } else {
@@ -152,6 +154,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
 
 
     //Usage of the mouseover method
+    //It takes in the petImage ID as the method and as that image is mouseover selected
+    //it will change the Image into any gif or image i chose it to be
     $("#petImage").mouseover(function () {
       $(this).attr("src", "images/pet-kirby.gif");
     });
@@ -161,6 +165,9 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     });
 
     //Usage of the keypress method 
+    //it uses the document manipulation to take in the keypress
+    //when the event key its pressed it will play a set command here its to play a certain function
+    //here i have it set to r to call the reset function and reset the pet object to degault values
     $(document).keypress(function (event) {
     if (event.key === "r" || event.key === "R") {
       clickedResetButton();
